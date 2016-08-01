@@ -16,5 +16,20 @@ function upload(response) {
 	  response.end();
 }
 
+function crystal(response) {
+  console.log("Request handler 'crystal' was called.");
+	  response.writeHead(200, {"Content-Type": "text/plain"});
+	  response.write("Hello my name is Mud");
+	  response.end();
+	
+}
+
+/* For all functions above we must export.
+ * Any function that is created, but not export will return
+ * "404 Not Found" message when attempting to access in 
+ * browser
+*/
+
 exports.start = start;
 exports.upload = upload;
+exports.crystal = crystal;
